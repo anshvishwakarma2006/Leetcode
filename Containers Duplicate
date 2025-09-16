@@ -1,0 +1,9 @@
+unodered_set <int> seen;
+        for(int num:nums){
+            if(seen.find!=seen.end()){
+                return true;
+            }
+            seen.inser(num);
+        }
+        return false;
+    }
