@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+        int counts[26] = {0};
+        for (size_t i = 0; i < s.size(); ++i) {
+            counts[s[i] - 'a']++;
+            counts[t[i] - 'a']--;
+        }
+        for (int c = 0; c < 26; ++c) {
+            if (counts[c] != 0) return false;
+        }
+        return true;
+    }
+};
