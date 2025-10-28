@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int minStartValue(vector<int>& nums) {
+        int prefixsum=0;
+        int minPrefix=INT_MAX;
+        for(int x:nums){
+            prefixsum+=x;
+            minPrefix=min(minPrefix,prefixsum);
+        }
+        if(minPrefix<=0){
+            return 1-minPrefix;
+        }
+        else{
+            return 1;
+        }
+        
+    }
+};
